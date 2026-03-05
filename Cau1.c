@@ -1,16 +1,31 @@
-#include<stdio.h>
-int main(){
-	int n;
-	scanf("%d", &n);
-	int i;
-	double S=0;
-	if(n>0){
-		for(i=1; i<=n; i++){
-			S+=1.0/i;
+#include<iostream>
+using namespace std;
+
+class Student{
+	private:
+		string name;
+		int age;
+		string gender;
+		double gpa;
+	public:
+		Student(){
+			name = "";
+			age = 0;
+			gender = "";
+			gpa = 0;
 		}
-		printf("%.3lf", S);
-		}else{
-			printf("Sai cu phap");
+		
+		Student(string name, int age, string gender, double gpa){
+			this->name = name;
+			this->age = age;
+			this->gender = gender;
+			this->gpa = gpa;
 		}
-		return 0;
-	}
+		
+		void display(){
+			cout << "Name: " << name << endl;
+			cout << "Age: " << age << endl;
+			cout << "Gender: " << gender << endl;
+			cout << "GPA: " << gpa << endl;
+		}
+};
